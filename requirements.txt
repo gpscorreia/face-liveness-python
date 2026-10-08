@@ -1,2 +1,2 @@
 opencv-python
-mediapipe
+mediapipe==0.10.35
