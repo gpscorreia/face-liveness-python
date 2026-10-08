@@ -74,7 +74,7 @@ def main():
         action_detected = None
 
         if detection_result.face_landmarks:
-            cv2.putText(frame, "Face detected", (20, 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+            cv2.putText(frame, "Face detectada", (20, 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
             
             # Etapa 3: Detecção de piscada (Blink)
             if detection_result.face_blendshapes:
@@ -92,7 +92,7 @@ def main():
                 # Se a pontuação de "olho fechado" for maior que 0.4 em ambos os olhos, detectamos a piscada
                 if blink_left > 0.4 and blink_right > 0.4:
                     action_detected = "blink"
-                    current_action = "Blink detected"
+                    current_action = "Piscou!"
                     action_frames = 15
 
             # Etapa 4: Detecção de movimento da cabeça
@@ -110,12 +110,12 @@ def main():
                 # Se a distância esquerda é muito maior que a direita, o rosto virou para a esquerda (espelhado)
                 if ratio > 1.8:
                     action_detected = "turn_right"
-                    current_action = "Head turned RIGHT"
+                    current_action = "Virou a cabeça para a DIREITA"
                     action_frames = 15
                 # Se a distância direita é muito maior, o rosto virou para a esquerda
                 elif ratio < 0.55:
                     action_detected = "turn_left"
-                    current_action = "Head turned LEFT"
+                    current_action = "Virou a cabeça para a ESQUERDA"
                     action_frames = 15
 
             # Desenhar os pontinhos no rosto
