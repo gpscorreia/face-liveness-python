@@ -4,11 +4,11 @@ Projeto pessoal para detecção de prova de vida (Liveness) usando Python, OpenC
 
 ## Etapas do MVP
 1. [x] Abrir a webcam utilizando OpenCV e exibir a imagem.
-2. [ ] Detecção facial.
-3. [ ] Detecção de piscada.
-4. [ ] Detecção de movimento da cabeça.
-5. [ ] Sistema de desafios.
-6. [ ] Resultado final de Liveness.
+2. [x] Detecção facial.
+3. [x] Detecção de piscada.
+4. [x] Detecção de movimento da cabeça.
+5. [x] Sistema de desafios.
+6. [x] Resultado final de Liveness.
 
 ## Como executar
 
